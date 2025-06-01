@@ -10,24 +10,18 @@ body{
 justify-content:centrer horizontalement
 align-items:centrer verticalement*/
 nav{
+    background-color: #000;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border-bottom: 5px solid #6f6f6f; 
+    border-bottom: 5px solid #D4AF37; 
 
-}
-
-
-.onglets {
-    margin-top: 0;
-    margin-left: 0;
-    display: flex;
-    gap: 20px;
 }
 
 nav h1{
-    color: #717171;
+    /* color:#E6BE8A; */
+    color: #D4AF37;
     font-family: 'Playfair Display', sans-serif;
     font-size: 30px;
 
@@ -38,14 +32,31 @@ nav h1{
 }
 .onglets a {
     text-decoration: none;
-    color: #000;
+    color: #D4AF37;
     margin-right: 10px;
-    border-bottom: 1px solid #000;
+    /* border-bottom: 1px solid #000; */
     padding-bottom: 5px;
     
 }
 .onglets a:hover {
-    /* background-color: #000; */
-    color:#c8aa6e;
+      /* color:#E6BE8A; */
+      text-decoration: underline;
+}
+header{
+    background-image: url('image/Grilled\ Steak\ with\ Fries\ and\ Vegetables.jpeg'
+    );
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    background-size: 100px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     
+}
+
+@media screen and (max-width:680px) {
+    .onglets{
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
 }
