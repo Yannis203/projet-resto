@@ -15,7 +15,7 @@ nav{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border-bottom: 5px solid #D4AF37; 
+    border-bottom: 5px solid #381c0b  ;  
 
 }
 
@@ -35,6 +35,7 @@ nav h1{
     color: #D4AF37;
     margin-right: 10px;
     padding-bottom: 5px;
+    transition: all 0.6s ease;
     
 }
 .onglets a:hover {
@@ -49,7 +50,9 @@ header{
     background-size: cover;
     color: #fff;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    padding: 152px;
+    padding: 160px;
+    margin-bottom: 20px;
+    
     
 }
 header h1 {
@@ -64,13 +67,48 @@ header h4 {
 }
 header button {
     padding: 10px 20px;
-    background-color: #D4AF37;
+    background-color:  rgba(255, 255, 255, 0.5);
+    border: 1px solid #D4AF37;
     color: #000;
-    border-radius: 10px;
+    border-radius: 45px;
     font-size: 20px;
     font-family: 'Playfair Display', serif;
-    opacity: 0.8;
-    filter: brightness(0.9);
+    transition:all 0.3s ease;
+}
+button:hover {
+    background-color: #D4AF37;
+    color: #000;
+    /* cursor: pointer; */
+}
+.main{
+    margin-top: -40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #381c0b;
+  }
+
+.main  img {
+    height: 300px;
+    width:400px;
+    margin-top: 5px;
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+/* flex:taille fixe à 30%.Ne grandit ni ne rétrécit(flex grow=0 ne peut pas grandir , flex shrink=0 ne peut pas rétrécir,flex basis=30% la taille de base de l'élément est à 30% */
+.left {
+    flex: 0 0 30%;
+    padding: 20px;
+    background-color:#D4AF37;
+    color: #fff;
+}
+.right img {
+    flex: 0 0 70%;
 }
 
 
