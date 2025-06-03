@@ -41,15 +41,16 @@ nav h1{
       text-decoration: underline;
 }
 header{
-    background-image: url('image/Grilled\ Steak\ with\ Fries\ and\ Vegetables.jpeg'
+    background-image: url('image/header\ site\ de\ restaurant\ \(2\).jpg'
     );
     display: flex;
     flex-direction: column;
     align-items:center ;
-    /* background-size: 100px; */
+    background-size: cover;
     color: #fff;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     padding: 152px;
+    
 }
 header h1 {
     font-family: 'Playfair Display', serif;
@@ -64,11 +65,14 @@ header h4 {
 header button {
     padding: 10px 20px;
     background-color: #D4AF37;
-    color: #fff;
-    border-radius: 20px;
+    color: #000;
+    border-radius: 10px;
     font-size: 20px;
     font-family: 'Playfair Display', serif;
+    opacity: 0.8;
+    filter: brightness(0.9);
 }
+
 
 @media screen and (max-width:680px) {
     .onglets{
