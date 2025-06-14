@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <nav>
+    <!-- <nav>
         <h1> TᕼE ᗷIᒪᒪIOᑎᗩIᖇE </h1>
         <div class="onglets">
             <a href="index.html">Home</a>
@@ -18,8 +18,52 @@
             <a href="index.html" >Réservation</a>
          </div> 
            <img src="image/menu icone.png" alt="icone menu" class="menu-icon">
-         
+          -->
     </nav>
+    <form id="reservation-form">
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required> <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required> <br>
+
+        <label for="table">Numéro de table: </label>
+        <input type="number" id="table" name="table" required> <br>
+
+        <label for="date"> Date:</label>
+        <input type="date" id="date" name="date" required> <br>
+
+        <button type="submit">Réserver</button>
+    </form>
+    <p id="message"></p>
 </body>
-<script src="script.js" ></script>
+<script>
+    // Partie backend du projet (avec appdcript )
+document.getElementById("reservation-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Empêche le rechargement de la page
+
+  // Récupération des données du formulaire
+  const nom = document.getElementById("nom").value;
+  const email = document.getElementById("email").value;
+  const date = document.getElementById("date").value;
+  const table = document.getElementById("table").value;
+
+  // Envoi des données vers Apps Script (backend)
+  fetch("https://script.google.com/macros/s/AKfycbwVKUy9rEMN1f_jiohsRwxtu-0vQfYxo5aL2tHKjeqC9Gi9j8qtOr2w_6jTqhffRqoT/exec", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ nom, email, date, table }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("message").textContent = data.message;
+  })
+  .catch(error => {
+    document.getElementById("message").textContent = "Erreur lors de l’envoi ";
+    console.error("Erreur : ", error);
+  });
+});
+</script>
 </html>
