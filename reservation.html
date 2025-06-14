@@ -1,69 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réservation</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Réservation Restaurant</title>
 </head>
 <body>
-    
-    <!-- <nav>
-        <h1> TᕼE ᗷIᒪᒪIOᑎᗩIᖇE </h1>
-        <div class="onglets">
-            <a href="index.html">Home</a>
-            <a href="index.html">À propos</a>
-            <a href="index.html">Nos produits</a>
-            <a href="index.html">Contact</a>
-            <a href="index.html" >Réservation</a>
-         </div> 
-           <img src="image/menu icone.png" alt="icone menu" class="menu-icon">
-          -->
-    </nav>
-    <form id="reservation-form">
-        <label for="nom">Nom:</label>
-        <input type="text" id="nom" name="nom" required> <br>
+  <h1>Formulaire de réservation</h1>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required> <br>
+  <form id="reservationForm">
+    <input type="text" name="nom" placeholder="Votre nom" required><br>
+    <input type="email" name="email" placeholder="Votre email" required><br>
+    <input type="date" name="date" required><br>
+    <input type="number" name="table" placeholder="Numéro de table" required><br>
+    <button type="submit">Envoyer</button>
+  </form>
 
-        <label for="table">Numéro de table: </label>
-        <input type="number" id="table" name="table" required> <br>
+  <p id="message"></p>
 
-        <label for="date"> Date:</label>
-        <input type="date" id="date" name="date" required> <br>
+  <script>
+    document.getElementById("reservationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
 
-        <button type="submit">Réserver</button>
-    </form>
-    <p id="message"></p>
+      const nom = this.nom.value;
+      const email = this.email.value;
+      const date = this.date.value;
+      const table = this.table.value;
+
+      fetch("https://script.google.com/macros/s/AKfycbwsa2bcbU9Mxe7Q5hkrkCz7oekEGctu8fojdgHICHSjq1uKmAgUdpqlbNTW8VhZ3Dpf/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ nom, email, date, table })
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("message").textContent = data.message;
+      })
+      .catch(error => {
+        document.getElementById("message").textContent = "Erreur lors de l’envoi.";
+        console.error("Erreur :", error);
+      });
+    });
+  </script>
 </body>
-<script>
-    // Partie backend du projet (avec appdcript )
-document.getElementById("reservation-form").addEventListener("submit", function(event) {
-  event.preventDefault(); // Empêche le rechargement de la page
-
-  // Récupération des données du formulaire
-  const nom = document.getElementById("nom").value;
-  const email = document.getElementById("email").value;
-  const date = document.getElementById("date").value;
-  const table = document.getElementById("table").value;
-
-  // Envoi des données vers Apps Script (backend)
-  fetch("https://script.google.com/macros/s/AKfycbwVKUy9rEMN1f_jiohsRwxtu-0vQfYxo5aL2tHKjeqC9Gi9j8qtOr2w_6jTqhffRqoT/exec", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ nom, email, date, table }),
-  })
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById("message").textContent = data.message;
-  })
-  .catch(error => {
-    document.getElementById("message").textContent = "Erreur lors de l’envoi ";
-    console.error("Erreur : ", error);
-  });
-});
-</script>
 </html>
