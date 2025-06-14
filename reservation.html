@@ -21,21 +21,17 @@
     document.getElementById("reservationForm").addEventListener("submit", function(e) {
       e.preventDefault();
 
-      const nom = this.nom.value;
-      const email = this.email.value;
-      const date = this.date.value;
-      const table = this.table.value;
 
-      fetch("https://script.google.com/macros/s/AKfycbwsa2bcbU9Mxe7Q5hkrkCz7oekEGctu8fojdgHICHSjq1uKmAgUdpqlbNTW8VhZ3Dpf/exec", {
+    const formData=new FormData(this);
+
+      fetch("https://script.google.com/macros/s/AKfycbxHyt7s12ZFyOaOkE2d53BQ3QfK9HDpxC7xJ2BJVDYNHCQ6cTlPVKS2Pa4OiYDe2IB5/exec", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ nom, email, date, table })
+    
+        body:formData
       })
-      .then(response => response.json())
+      .then(response => response.text())
       .then(data => {
-        document.getElementById("message").textContent = data.message;
+        document.getElementById("message").textContent = data;
       })
       .catch(error => {
         document.getElementById("message").textContent = "Erreur lors de l’envoi.";
