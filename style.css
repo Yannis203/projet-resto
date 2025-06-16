@@ -233,11 +233,23 @@ footer #Contact{
 
 @media  (max-width: 768px) {
   .card{
-    margin: 10px;
+    /* margin: 10px; */
+    /* padding: 1px; */
+    justify-content: center;
+    align-items: center;
   }
   .right img {
     height: 200px;
     width: 100%;
+    object-fit: cover;
+  }
+  header {
+    height: 80%;
+    padding: 50%;
+  }
+  header h1 {
+    font-size: 40px;
+    text-align: center;
   }
     nav h1{
     font-size: 25px;
@@ -265,8 +277,8 @@ footer #Contact{
 }
     .onglets a {
         color: #fff;
-        margin: 25px 0;
-        font-size: 20px;
+        margin: 20px 0;
+        font-size: 15px;
         
     }
   
