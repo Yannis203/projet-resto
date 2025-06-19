@@ -259,8 +259,8 @@ footer #Contact{
       font-size: 2.2em;
          margin-bottom: 15px;
          color: #333;
-    border-top: 5px solid #D4AF37;
-    border-bottom:5px solid #D4AF37; 
+    border-top: 5px solid #000;
+    border-bottom:5px solid #000; 
     font-style: 'Playfair Display', sans-serif;
  }
 
