@@ -23,9 +23,6 @@ nav{
     position: fixed;
     width: 100%;
     height: 80px;
-    
-
-
 }
 
 
@@ -34,9 +31,10 @@ nav h1{
     color: #D4AF37;
     font-family: 'Playfair Display', sans-serif;
     font-size: 30px;
+    margin-left: 30px;
 
-}
-.onglets{
+} 
+ .onglets{
      margin-top: 3px;
     margin-left: 0; 
     display: flex;
@@ -50,48 +48,58 @@ nav h1{
     padding-bottom: 5px;
     
     
-}
-.onglets a:hover {
+} 
+ .onglets a:hover {
       text-decoration: underline;
 }
-header{
+ header{
     background-image: url('image/header\ site\ de\ restaurant\ \(2\).jpg'
     );
-    display: flex;
+     display: flex;
     flex-direction: column;
     align-items:center ;
     background-size: cover;
     color: #fff;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    padding:  23%;
-    margin-bottom: 20px;
-
+    padding:  20%;
     
+    margin-bottom: 20px; 
     
 }
 header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 50px;
+
 }
 header h4 {
-    margin-top: -20px;
-    font-size: 20px;
+    margin-top: -20px; 
+    font-size : 20px;
     text-align: center;
-    border-bottom: 2px solid #fff;
+    padding: 3px;
+    flex-direction: column;
+    text-wrap: wrap;
+  
 }
-header button {
-    padding: 10px 20px;
-     background-color: #D4AF37;
-    border: 1px solid #D4AF37;
-    box-shadow: 3px 3px 3px 3px #D4AF37;
-    color: #000;
-    font-size: 20px;
-    font-family: 'Playfair Display', serif;
-    transition:all 0.3s ease;
+.header_button {
+        font-family: 'Playfair Display', serif;
+     background-color: #FFD700;
+         /* Couleur or */
+         color: #333;
+         /* Texte sombre pour un bon contraste */
+         border: 2px solid #FFD700;
+         /* Bordure assortie */
+         padding: 10px 20px;
+         /* Plus grand padding pour un bouton plus proéminent */
+         font-size: 1.3em;
+         font-weight: bold;
+         border-radius: 15px;
+         text-decoration: none;
+         transition: 0.5s;
 }
-button:hover {
-       background-color:  rgba(255, 255, 255, 0.5);
-    color: #000;
+.header_button:hover {
+    background-color: #dbbb02;
+         /* Une nuance d'or plus foncée au survol */
+         border-color: #dbbb02;
+         color: #222;
     
 }
 .main{
@@ -188,6 +196,7 @@ footer{
 
     height: auto;
     background: #000;
+        /* background-color: #4E3B31; */
     color: #fff;
     padding: 30px 5vw;
     box-sizing: border-box;
@@ -224,14 +233,102 @@ footer .services{
 }
 footer #Contact{
     color: #D4AF37;
+    text-align: center;
 }
 .menu-icon{
     display: none;
     margin-right: 20px;
 }
 /* style pour le formulaire de réservation  */
+ .form_princ{
+    
+     /* padding: 100px 0; */
+     height: 100vh;
+         /* Plus de padding en haut pour la navbar fixe */
+         background-color: #fff;
+         width: 100%;
+ }
 
-@media  (max-width: 768px) {
+ .header_form{
+      text-align: center;
+         margin-bottom: 70px;
+         /* margin-top: -20px; */
+         padding: 10px;
+ }
+ .header_form h2 {
+      font-size: 2.2em;
+         margin-bottom: 15px;
+         color: #333;
+    border-top: 5px solid #D4AF37;
+    border-bottom:5px solid #D4AF37; 
+    font-style: 'Playfair Display', sans-serif;
+ }
+
+ 
+ .form_sec {
+
+            max-width: 600px;
+         /* Largeur maximale du formulaire */
+         margin: 0 auto;
+         /* Centrer le formulaire */
+         background-color: #fff;
+         padding: 40px;
+         border-radius: 8px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ }
+ .form_sec h1{
+    font-size: 30px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 20px;
+     font-family: 'Monserrat', sans-serif;
+     border-bottom: 2px solid #D4AF37;
+ }
+ .form_sec p {
+    text-align: center;
+    font-size: 16px;
+    color: #D4AF37;
+ }
+ .form_sec label{
+    color: #444;
+ }
+ .input_box{
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+ }
+ .input_box input{
+  
+    width: 100%;
+         /* Les champs prennent toute la largeur disponible */
+         padding: 12px;
+         border: 1px solid #ddd;
+         border-radius: 5px;
+         font-size: 1em;
+         font-family: Arial, sans-serif;
+         /* Assure la cohérence de la police */
+         box-sizing: border-box;
+         
+
+ }
+  
+  .button_res{
+    width: 100%;
+    padding: 8px;
+    border-radius: 25px;
+    outline: none;
+    background-color: #D4AF37;
+    border: 0;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: 0.5s  ;
+  }
+   .button_res:hover{
+    background-color: #dbbb02;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+   }
+@media  (max-width: 576px) {
   .card{
     /* margin: 10px; */
     /* padding: 1px; */
@@ -289,4 +386,23 @@ footer #Contact{
         
     }
     
+
+    
+}
+
+@media (max-width: 576px) {
+     .form_princ {
+             padding: 80px 0;
+         }
+
+         .form_sec {
+             padding: 30px;
+             margin: 0 15px;
+             /* Pour un peu d'espace sur les bords */
+         }
+
+         .form-header h2 {
+             font-size: 2.5em;
+         }
+  
 }

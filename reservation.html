@@ -2,21 +2,45 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Réservation Restaurant</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Formulaire de réservation</h1>
+ 
+  
 
-  <form id="reservationForm">
-    <input type="text" name="nom" placeholder="Votre nom" required><br>
-    <input type="email" name="email" placeholder="Votre email" required><br>
-    <input type="date" name="date" required><br>
-    <input type="number" name="table" placeholder="Numéro de table" required><br>
-    <button type="submit">Envoyer</button>
-  </form>
 
+<section class="form_princ">
+    <div class="header_form">
+      <h2>TᕼE ᗷIᒪᒪIOᑎᗩIᖇE </h2>
+      <!-- <p>N'hésitez pas à nous envoyer un message pour toute question, commande ou réservation.</p> -->
+    </div>
+  <form id="reservationForm" class="form_sec">
+    <h1>Réservez-ici: </h1>
+  <label for="nom">Nom :</label><br>
+  <div class="input_box"><input type="text" name="nom" id="nom"  required><br><br></div>
+
+  <label for="email">Email :</label><br>
+  <div class="input_box"><input type="email" name="email" id="email"  required><br><br> </div>
+
+  <label for="table">Numéro de table :</label><br>
+  <div class="input_box"><input type="number" name="table" id="table"  required><br><br> </div>
+
+  <label for="date">Date:</label> <br>
+  <div class="input_box"><input type="date" name="date" id="date" required><br><br> </div>
+
+  <label for="time">Heure/</label><br>
+  <div class="input_box"><input type="time" name="time" id="time"  required><br><br> </div>
+  <button class="button_res" type="submit">Envoyer</button>
   <p id="message"></p>
+  </form>
+  
+</section>
 
+
+
+  
   <script>
     document.getElementById("reservationForm").addEventListener("submit", function(e) {
       e.preventDefault();
@@ -24,7 +48,7 @@
 
     const formData=new FormData(this);
 
-      fetch("https://script.google.com/macros/s/AKfycbxHyt7s12ZFyOaOkE2d53BQ3QfK9HDpxC7xJ2BJVDYNHCQ6cTlPVKS2Pa4OiYDe2IB5/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbyOZpbkUeILyQQspB8wHh8UfMdQmlvr2Ssk88e02Z79zCYXIcUrMHcG8nhCUYlT7hsC/exec", {
         method: "POST",
     
         body:formData
