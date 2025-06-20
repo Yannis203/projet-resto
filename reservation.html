@@ -17,7 +17,7 @@
       <!-- <p>N'hésitez pas à nous envoyer un message pour toute question, commande ou réservation.</p> -->
     </div>
   <form id="reservationForm" class="form_sec">
-    <h1>Réservez-ici: </h1>
+    <h1>Réservez ici: </h1>
   <label for="nom">Nom :</label><br>
   <div class="input_box"><input type="text" name="nom" id="nom"  required><br><br></div>
 
@@ -26,6 +26,11 @@
 
   <label for="table">Numéro de table :</label><br>
   <div class="input_box"><input type="number" name="table" id="table"  required><br><br> </div>
+
+  
+  <label for="nbr_personne">Nombre de personnes:</label><br>
+  <div class="input_box"><input type="number" name="nbr_personne" id="nbr_personne"  required><br><br> </div>
+
 
   <label for="date">Date:</label> <br>
   <div class="input_box"><input type="date" name="date" id="date" required><br><br> </div>
@@ -38,17 +43,14 @@
   
 </section>
 
-
-
-  
-  <script>
+    <script>
     document.getElementById("reservationForm").addEventListener("submit", function(e) {
       e.preventDefault();
 
 
     const formData=new FormData(this);
 
-      fetch("https://script.google.com/macros/s/AKfycbyOZpbkUeILyQQspB8wHh8UfMdQmlvr2Ssk88e02Z79zCYXIcUrMHcG8nhCUYlT7hsC/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbwSDPQCY3PIfIE8mJ60qp1-GnGgwGFnk8jYjSIbdMX3zuVWfchvygqzgoO31D7WIz9U/exec", {
         method: "POST",
     
         body:formData
@@ -64,4 +66,8 @@
     });
   </script>
 </body>
+    
+  </script>
+</body>
 </html>
+--------------------------------------------------------------------------

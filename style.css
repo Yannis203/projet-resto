@@ -259,9 +259,9 @@ footer #Contact{
       font-size: 2.2em;
          margin-bottom: 15px;
          color: #333;
-    border-top: 5px solid #000;
-    border-bottom:5px solid #000; 
-    font-style: 'Playfair Display', sans-serif;
+    border-top: 5px solid #D4AF37;
+    border-bottom:5px solid #D4AF37; 
+        font-family: 'Playfair Display', serif;
  }
 
  
@@ -286,8 +286,9 @@ footer #Contact{
  }
  .form_sec p {
     text-align: center;
-    font-size: 16px;
-    color: #D4AF37;
+    font-size: 15px;
+    color: green;
+    font-weight: bold;
  }
  .form_sec label{
     color: #444;
@@ -389,10 +390,10 @@ footer #Contact{
 
     
 }
-
+/* Responsive Formulaire */
 @media (max-width: 576px) {
      .form_princ {
-             padding: 80px 0;
+             padding: 50px 0;
          }
 
          .form_sec {
