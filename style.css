@@ -68,6 +68,7 @@ nav h1{
 header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 50px;
+    font-weight: bold;
 
 }
 header h4 {
@@ -77,6 +78,7 @@ header h4 {
     padding: 3px;
     flex-direction: column;
     text-wrap: wrap;
+    font-weight: bold;
   
 }
 .header_button {
@@ -239,7 +241,7 @@ footer #Contact{
     display: none;
     margin-right: 20px;
 }
-/* style pour le formulaire de réservation  */
+/* style pour le formulaire de réservation --------------------------------------------------- */
  .form_princ{
     
      /* padding: 100px 0; */
@@ -328,6 +330,58 @@ footer #Contact{
     background-color: #dbbb02;
     border: 2px solid rgba(255, 255, 255, 0.2);
     color: #fff;
+   }
+   /* style pour la partie table --------------------------------------------------------------------------- */
+     .section1  {
+     background-image: url(image/The\ Pool\ Cafe\ Terraces.jpeg); 
+    
+   } 
+   .section2{
+     display: flex;
+    flex-wrap: wrap; 
+    background: #fff;
+    justify-content: center;
+    gap: 24px;
+      /* font-family: 'Playfair Display', sans-serif; */
+   }
+   .section2 h1 {
+     text-align: center;
+    font-family: playfair display, serif;
+    width: 100%;
+    color: #D4AF37;
+    border: solid 2px #D4AF37;
+     /* font-family: 'Playfair Display', sans-serif; */
+   }
+   .section2 h3 {
+    font-family: playfair display, serif;
+    border-bottom: 2px solid #000;
+   }
+   .tables{
+     margin-left: 0;
+    /* background: #F9F7F5; */
+    background: #F0EAD6;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   }
+   .tables img {
+     width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+   }
+   .tables p {
+    text-align: center;
+   }
+   .push {
+    
+     padding: 5px;
+      font-family: playfair display, serif;
+      background-color: #D4AF37;
+      border: #D4AF37;
+      
+    
    }
 @media  (max-width: 576px) {
   .card{
