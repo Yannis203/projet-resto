@@ -53,7 +53,7 @@ nav h1{
       text-decoration: underline;
 }
  header{
-    background-image: url('image/header\ site\ de\ restaurant\ \(2\).jpg'
+    background-image: url('image/restaurant\ \(1\).jpeg'
     );
      display: flex;
     flex-direction: column;
@@ -79,6 +79,7 @@ header h4 {
     flex-direction: column;
     text-wrap: wrap;
     font-weight: bold;
+    color: #FFD700;
   
 }
 .header_button {
@@ -111,6 +112,10 @@ header h4 {
     align-items: center;
     background-color: #381c0b;
 
+  }
+  .main h1{
+     font-family: 'Playfair Display', serif;
+     border-bottom:  2px solid #000;
   }
 
 
@@ -154,6 +159,7 @@ header h4 {
     background: #381c0b;
     justify-content: center;
     gap: 24px;
+    margin-top: -40px;
 }
 .box1{
     margin-left: 0;
@@ -172,6 +178,9 @@ header h4 {
     height: 200px;
     border-radius: 10px;
     object-fit: cover;
+}
+.box1 h3 {
+    border-bottom: 2px solid #000;
 }
 
 .prix{
@@ -333,7 +342,7 @@ footer #Contact{
    }
    /* style pour la partie table --------------------------------------------------------------------------- */
      .section1  {
-     background-image: url(image/The\ Pool\ Cafe\ Terraces.jpeg); 
+     background-image: url(image/restaurant\ \(1\).jpeg); 
     
    } 
    .section2{
@@ -358,7 +367,6 @@ footer #Contact{
    }
    .tables{
      margin-left: 0;
-    /* background: #F9F7F5; */
     background: #F0EAD6;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -382,6 +390,41 @@ footer #Contact{
       border: #D4AF37;
       
     
+   }
+   /* Partie galerie--------------------------------------------------------------------------------------- */
+   .galerie{
+    margin-top: -40px;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 16px;
+    padding: 20px;
+   }
+   .galerie img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+
+   }
+   /* partie contact-------------------------------------------------------------------------------------------------------------------- */
+   .merci{
+    background-color: #000;
+    margin-top: -40px;
+    height: 50vh;
+    
+   }
+ 
+   .merci h1{
+    color: #D4AF37;
+      font-family: playfair display, serif;
+      text-align: center;
+   }
+   .merci p {
+    color: #D4AF37;
+    /* text-align: center; */
+    font-size: 20px;
+      font-family: playfair display, serif;
    }
 @media  (max-width: 576px) {
   .card{
