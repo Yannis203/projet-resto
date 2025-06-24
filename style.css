@@ -11,6 +11,7 @@ body{
 html{
     scroll-behavior:smooth;
 }
+/* Partie nav et header */
 /* flex-wrap:pour forcer les éléments à revenir à la ligne 
 justify-content:centrer horizontalement
 align-items:centrer verticalement*/
@@ -59,7 +60,7 @@ nav h1{
     flex-direction: column;
     align-items:center ;
     background-size: cover;
-    color: #fff;
+    color:#fff;
     padding:  20%;
     
     margin-bottom: 20px; 
@@ -79,130 +80,207 @@ header h4 {
     flex-direction: column;
     text-wrap: wrap;
     font-weight: bold;
-    color: #FFD700;
+    color: #F0EAD6;
   
 }
-.header_button {
-        font-family: 'Playfair Display', serif;
-     background-color: #FFD700;
-         /* Couleur or */
-         color: #333;
-         /* Texte sombre pour un bon contraste */
-         border: 2px solid #FFD700;
-         /* Bordure assortie */
-         padding: 10px 20px;
-         /* Plus grand padding pour un bouton plus proéminent */
-         font-size: 1.3em;
-         font-weight: bold;
-         border-radius: 15px;
+ .header_button{
+         display: inline-block;
+         background-color: #D4AF37;
+         color: #fff;
+         padding: 12px 50px;
          text-decoration: none;
-         transition: 0.5s;
-}
-.header_button:hover {
-    background-color: #dbbb02;
-         /* Une nuance d'or plus foncée au survol */
-         border-color: #dbbb02;
-         color: #222;
-    
-}
-.main{
-    margin-top: -40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #381c0b;
+         border-radius: 5px;
+         border: #D4AF37;
+         transition: background-color 0.3s ease;
+         font-weight: bold;
+     }
 
-  }
-  .main h1{
-     font-family: 'Playfair Display', serif;
-     border-bottom:  2px solid #000;
-  }
+     .header_button:hover {
+         background-color: #8f741d;
+     }
 
+  /* Partie à propos ------------------------------------------------------------------------------------------------------------ */
+     .apropos-section {
+         padding: 80px 0;
+         /* Espacement vertical */
+         background-color: #000;
+         /* Fond blanc pour cette section */
+         text-align: center;
+         margin-top: -40px;
+     }
 
+     .apropos-header {
+         margin-bottom: 50px;
+         /* Espacement sous l'entête */
+     }
 
-.card{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 40px;
-}
-/* flex:taille fixe à 30%.Ne grandit ni ne rétrécit(flex grow=0 ne peut pas grandir , flex shrink=0 ne peut pas rétrécir,flex basis=30% la taille de base de l'élément est à 30% */
-.left {
-    flex: 0 0 30%;
-    padding: 20px;
-    background-color:#D4AF37;
-    color: #fff;
-}
-.right img {
-    
-     height: auto;
-    width:100%;
-    max-width: 400px;
-    margin-top: 5px;
-    display: block;
-}
-.Menu h1{
-    text-align: center;
-    font-family: playfair display, serif;
-    width: 100%;
-    color: #D4AF37;
-    border: solid 2px #D4AF37;
-}
-.Menu h3{
-    font-family: playfair display, serif;
-}
-.Menu {
+     .apropos-header h2 {
+         font-size: 2.2em;
+         margin-bottom: 15px;
+         color: #D4AF37;
+         font-family: 'Playfair Display', serif;
+     }
 
-    display: flex;
-    flex-wrap: wrap; 
-    background: #381c0b;
-    justify-content: center;
-    gap: 24px;
-    margin-top: -40px;
-}
-.box1{
-    margin-left: 0;
-    background: #D4AF37;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    width: 300px;
-    
-    
-}
-.box1 p {
-    text-align: center;
-}
-.box1 img{
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-.box1 h3 {
-    border-bottom: 2px solid #000;
-}
+     .apropos-header p {
+         font-size: 1.2em;
+         color: #fff;
+         max-width: 800px;
+         /* la largeur de la description */
+         margin: 0 auto;
+         /* Centrer la description */
+     }
 
-.prix{
-     background: rgb(69, 114, 2);
-    border-radius: 28px;
-    width: 15%;
-    margin-left: 3px;
-    height: 20px;
-    padding: 10px; 
-    
-  
+     /* Mise en page des colonnes avec Flexbox  */
+     .row {
+         display: flex;
+         /* Active Flexbox pour les colonnes */
+         flex-wrap: wrap;
+         /* Permet aux colonnes de passer à la ligne sur de petits écrans */
+         /* margin: 0 -15px; */
+         /* Annule le padding du container pour les colonnes */
+     }
+
+     .col {
+         flex: 1;
+         /* Chaque colonne prendra une part égale de l'espace disponible */
+         min-width: 100px;
+         /* Largeur minimale pour éviter qu'elles ne soient trop petites */
+         padding: 0 15px;
+         /* Espacement intérieur pour chaque colonne */
+         margin-bottom: 30px;
+         /* Espacement entre les colonnes sur mobile */
+     }
+
+     .col h3 {
+         font-size: 1.8em;
+         margin-bottom: 15px;
+         color: #D4AF37;
+          font-family: 'Playfair Display', serif;
+     }
+
+     .col p {
+         color: #fff;
+         line-height: 1.8;
+     }
+
+     .col img {
+         max-width: 100%;
+         /* L'image ne sera jamais plus large que son conteneur */
+         height: auto;
+         display: block;
+         background-color: #D4AF37;
+         border-radius: 20px;
+         object-fit: cover;
+     }
 
 
-}
-.buttonmenu{
-    background: #000;
-    color: #FFD700;
-    border: none;
-     border-radius: 15px;
-    margin-left: 40%;
-    margin-bottom: 10px;
-} 
+/* partie menu */
+  .menu-section {
+         padding: 80px 0;
+         background-color: #000;
+         margin-top: -40px;
+     }
+
+     .menu-header {
+         text-align: center;
+         margin-bottom: 60px;
+     }
+
+     .menu-header h2 {
+         font-size: 2.2em;
+         margin-bottom: 15px;
+         color: #D4AF37;
+          font-family: playfair display, serif;
+          border-top: solid 2px #D4AF37;
+          border-bottom: solid 2px #D4AF37;
+     }
+
+     .menu-header p {
+         font-size: 1.2em;
+         color: #fff;
+         max-width: 800px;
+         margin: 0 auto;
+     }
+
+     /* Grille des produits (4 par ligne) */
+     .menu-grid {
+         display: grid;
+         /* Utilisation de CSS Grid pour la mise en page */
+         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+         /* 4 colonnes sur grand écran, s'adapte */
+         gap: 30px;
+         /* Espacement entre les cards */
+         justify-content: center;
+         /* Centrer les cards si moins de 4 */
+     }
+
+     /* Style des Cards produit */
+     .menu-card {
+         background-color: #F0EAD6;
+         border-radius: 8px;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+         /* Ombre douce */
+         padding: 20px;
+         text-align: center;
+         display: flex;
+         /* Flexbox pour organiser le contenu de la carte */
+         flex-direction: column;
+         /* Contenu empilé */
+         justify-content: space-between;
+         /* Pour pousser le bouton vers le bas */
+     }
+
+     .menu-card img {
+         width: 100%;
+         /* L'image prend toute la largeur de la card */
+         height: 200px;
+         /* Hauteur fixe pour les images des produits */
+         object-fit: cover;
+         /* Recadre l'image pour couvrir la zone sans la déformer */
+         border-radius: 20px;
+         margin-bottom: 15px;
+     }
+
+     .menu-card h3 {
+         font-size: 1.2em;
+         margin-bottom: 10px;
+         color: #444;
+     }
+
+     .menu-card .description {
+         font-size: 0.95em;
+         color: #777;
+         margin-bottom: 15px;
+         flex-grow: 1;
+         /* Permet à la description de prendre de l'espace pour aligner les boutons */
+     }
+
+     .menu-card .price {
+         font-size: 1.8em;
+         font-weight: bold;
+         color: #e44d26;
+         /* Une couleur pour le prix */
+         margin-bottom: 20px;
+         display: block;
+         /* Pour que le prix soit sur sa propre ligne */
+     }
+
+     /* Style du bouton "Commander" */
+     .btn {
+         display: inline-block;
+         background-color: #D4AF37;
+         color: #fff;
+         padding: 12px 25px;
+         text-decoration: none;
+         border-radius: 5px;
+         transition: background-color 0.3s ease;
+         font-weight: bold;
+     }
+
+     .btn:hover {
+         background-color: #8f741d;
+     }
+/* partie footer--------------------------------------------------------------------------------------------- */
 footer{
 
     height: auto;
@@ -348,9 +426,10 @@ footer #Contact{
    .section2{
      display: flex;
     flex-wrap: wrap; 
-    background: #fff;
+    background: #000;
     justify-content: center;
     gap: 24px;
+    margin-top: -40px;
       /* font-family: 'Playfair Display', sans-serif; */
    }
    .section2 h1 {
@@ -388,6 +467,7 @@ footer #Contact{
       font-family: playfair display, serif;
       background-color: #D4AF37;
       border: #D4AF37;
+      color: #000;
       
     
    }
@@ -411,33 +491,32 @@ footer #Contact{
    .merci{
     background-color: #000;
     margin-top: -40px;
+    padding: 50px 20px;
     height: 50vh;
+    
     
    }
  
+ 
    .merci h1{
-    color: #D4AF37;
+    color: #F0EAD6;
       font-family: playfair display, serif;
       text-align: center;
+      font-size: 80px;
    }
-   .merci p {
-    color: #D4AF37;
-    /* text-align: center; */
-    font-size: 20px;
-      font-family: playfair display, serif;
+   .merci h2{
+    color: #F0EAD6;
+    text-align: center;
    }
-@media  (max-width: 576px) {
-  .card{
-    /* margin: 10px; */
-    /* padding: 1px; */
+   
+   .merci_box{
+    /* display: flex; */
     justify-content: center;
     align-items: center;
-  }
-  .right img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-  }
+    padding-top: 100px;
+   }
+@media  (max-width: 576px) {
+  
   header {
     height: 80%;
     padding: 50%;
@@ -450,6 +529,20 @@ footer #Contact{
     font-size: 25px;
     margin-left: 20px;
   }
+  /* sectio à propos */
+     .row {
+             flex-direction: column;
+             /* Les colonnes s'empilent sur les petits écrans */
+         }
+
+         .col {
+             margin-bottom: 40px;
+             /* Plus d'espace entre les colonnes empilées */
+         }
+
+         .apropos-header h2 {
+             font-size: 2em;
+         }
   /* partie avec menu-icon , mobile js */
   .onglets{
     position: absolute;
@@ -486,6 +579,13 @@ footer #Contact{
     
 
     
+}
+
+/* classe pour menu b */
+.no_scroll{
+    overflow: hidden;
+    height: 100vh;
+
 }
 /* Responsive Formulaire */
 @media (max-width: 576px) {

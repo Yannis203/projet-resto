@@ -4,6 +4,7 @@ const menu =document.querySelector('.onglets');
 const liens=document.querySelectorAll('.onglets a');
 menuHumberger.addEventListener('click', () => {
     menu.classList.toggle('mobile-menu',);
+    body.classList.toggle("no_scroll")
 })
 liens.forEach(link =>{
     link.addEventListener('click',() =>{
@@ -14,3 +15,4 @@ liens.forEach(link =>{
 
 )
 
+const body = document.querySelector('body');
