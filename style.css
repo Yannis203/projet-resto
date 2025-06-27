@@ -80,7 +80,7 @@ header h4 {
     flex-direction: column;
     text-wrap: wrap;
     font-weight: bold;
-    color: #F0EAD6;
+    color:#8f741d;
   
 }
  .header_button{
@@ -320,6 +320,9 @@ footer .services{
 .service a {
     color: #D4AF37;
 }
+.service h3{
+    color: #8f741d;
+}
 footer #Contact{
     color: #D4AF37;
     text-align: center;
@@ -479,20 +482,28 @@ footer #Contact{
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 16px;
     padding: 20px;
+    
    }
+  
+         /* Animation au survol */
+
+
+    
    .galerie img {
       width: 100%;
       height: auto;
       border-radius: 8px;
       object-fit: cover;
+       
 
    }
    /* partie contact-------------------------------------------------------------------------------------------------------------------- */
    .merci{
     background-color: #000;
     margin-top: -40px;
-    padding: 50px 20px;
-    height: 50vh;
+    padding: 80px 20px;
+    /* height: 60vh; */
+    margin-bottom:-60px ;
     
     
    }
@@ -505,21 +516,69 @@ footer #Contact{
       font-size: 80px;
    }
    .merci h2{
-    color: #F0EAD6;
+    color: #8f741d;
+    font-family: playfair display, serif;
     text-align: center;
    }
-   
-   .merci_box{
-    /* display: flex; */
+    .merci_box{
+
     justify-content: center;
     align-items: center;
     padding-top: 100px;
    }
+   .maps{
+    background: #000;
+    
+   }
+   .maps h1{
+    text-align: center;
+    font-family: playfair display, serif;
+    font-size: 30px;
+    color: #8f741d;
+   }
+   .cadreM{
+    margin-left: 100px;
+   }
+   .foot_cont{
+    padding: 100px;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 30px 20px;
+    
+   }
+   .foot_cont h1{
+    text-align: center;
+    color: #8f741d;
+   }
+   .foot_cont p {
+    font-size: 20px;
+   }
+   .foot_cont a {
+    color: #8f741d;
+   }
+   .footer-social img{
+    background: #8f741d;
+    margin-left: 15px;
+    margin-right: 10px;
+   }
+   .pcontact{
+    color: #8f741d;
+   }
+   
+  
 @media  (max-width: 576px) {
   
   header {
-    height: 80%;
-    padding: 50%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   header h1 {
     font-size: 40px;
@@ -543,6 +602,7 @@ footer #Contact{
          .apropos-header h2 {
              font-size: 2em;
          }
+
   /* partie avec menu-icon , mobile js */
   .onglets{
     position: absolute;
@@ -602,5 +662,14 @@ footer #Contact{
          .form-header h2 {
              font-size: 2.5em;
          }
+  
+}
+/* page contact maps resposive  */
+@media (max-width: 576px) {
+    .cadreM{
+        width: auto;
+        height: 50%;
+        margin-left: 40px;
+    }
   
 }
