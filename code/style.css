@@ -54,7 +54,7 @@ nav h1{
       text-decoration: underline;
 }
  header{
-    background-image: url('image/restaurant\ \(1\).jpeg'
+    background-image: url('..//image/restaurant\ \(1\).jpeg'
     );
      display: flex;
     flex-direction: column;
@@ -104,7 +104,6 @@ header h4 {
          padding: 80px 0;
          /* Espacement vertical */
          background-color: #000;
-         /* Fond blanc pour cette section */
          text-align: center;
          margin-top: -40px;
      }
@@ -133,11 +132,7 @@ header h4 {
      /* Mise en page des colonnes avec Flexbox  */
      .row {
          display: flex;
-         /* Active Flexbox pour les colonnes */
          flex-wrap: wrap;
-         /* Permet aux colonnes de passer à la ligne sur de petits écrans */
-         /* margin: 0 -15px; */
-         /* Annule le padding du container pour les colonnes */
      }
 
      .col {
@@ -285,7 +280,6 @@ footer{
 
     height: auto;
     background: #000;
-        /* background-color: #4E3B31; */
     color: #fff;
     padding: 30px 5vw;
     box-sizing: border-box;
@@ -334,7 +328,6 @@ footer #Contact{
 /* style pour le formulaire de réservation --------------------------------------------------- */
  .form_princ{
     
-     /* padding: 100px 0; */
      height: 100vh;
          /* Plus de padding en haut pour la navbar fixe */
          background-color: #fff;
