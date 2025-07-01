@@ -54,7 +54,7 @@ nav h1{
       text-decoration: underline;
 }
  header{
-    background-image: url('..//image/restaurant\ \(1\).jpeg'
+    background-image: url('image/restaurant\ \(1\).jpeg'
     );
      display: flex;
     flex-direction: column;
